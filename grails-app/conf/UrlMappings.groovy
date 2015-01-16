@@ -10,10 +10,8 @@ class UrlMappings {
         "/"(view:"/index")
         "500"(view:'/error')
 
-        group("/api/address"){
-            "/zip-code"( resources: 'zipCode', includes: ['show'] )
+        group("/api/address") {
+            "/zip-code/$id"( controller: 'zipCode', action: 'show' )
         }
-
-
-	}
+    }
 }

@@ -1,7 +1,6 @@
 import com.vega.demo.ZipCodeController
 import grails.test.mixin.Mock
 import grails.test.mixin.TestFor
-import org.codehaus.groovy.grails.web.mapping.UrlMappings
 import spock.lang.Specification
 
 @TestFor(UrlMappings)
@@ -12,5 +11,4 @@ class UrlMappingsSpec extends Specification {
         expect:
         assertForwardUrlMapping("/api/address/zip-code/12345", controller: 'zipCode', action: "show")
     }
-
 }
